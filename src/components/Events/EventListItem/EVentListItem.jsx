@@ -12,9 +12,9 @@ export class EVentListItem extends Component {
             <Item>
               <Item.Image size='tiny' circular src={event.hostPhotoURL} />
               <Item.Content>
-                <Item.Header as='a'>{event.title}</Item.Header>
+                <Item.Header>{event.title}</Item.Header>
                 <Item.Description>
-                        Hosted by <a>{event.hostedBy}</a>
+                        Hosted by <i>{event.hostedBy}</i>
                 </Item.Description>
               </Item.Content>
             </Item>
@@ -28,7 +28,7 @@ export class EVentListItem extends Component {
         </Segment>
         <Segment secondary>
           <List horizontal>
-            {
+            {event.attendees &&
               event.attendees.map(attendee => (
                 <EventListAttendee key={attendee.id} attendee={attendee} />
               ))

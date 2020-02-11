@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
-import EVentListItem from '../EventListItem/EVentListItem'
+import EventListItem from '../EventListItem/EVentListItem'
 
 export class EventList extends Component {
   render () {
     return (
       <>
-        <EVentListItem />
-        <EVentListItem />
-        <EVentListItem />
+        {
+          this.props.events.map(event => (
+            <EventListItem key={event.id} event={event} />
+          ))
+        }
+
       </>
     )
   }

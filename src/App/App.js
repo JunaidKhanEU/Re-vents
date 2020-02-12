@@ -9,6 +9,7 @@ import PeopleDashboard from '../components/User/PeopleDashboard/PeopleDashboard'
 import SettingsDashboard from '../components/User/Settings/SettingsDashboard/SettingsDashboard'
 import UserDetailedPage from '../components/User/UserDetailedPage/UserDetailedPage'
 import EventForm from '../components/Events/EventForm/EventForm'
+import TestComponent from '../features/TestArea/TestComponent'
 const App = () => {
   return (
     <>
@@ -23,6 +24,7 @@ const App = () => {
           <Route exact path='/profile/:id' component={UserDetailedPage} />
           <Route path='/settings' component={SettingsDashboard} />
           <Route exact path='/createEvent' component={EventForm} />
+          <Route exact path='/test' component={TestComponent} />
         </Switch>
       </Container>
     </>

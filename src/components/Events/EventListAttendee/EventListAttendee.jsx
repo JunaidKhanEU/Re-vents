@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { List, Image } from 'semantic-ui-react'
-import NavBar from '../../NavBar/NavBar'
+import NavBar from '../../Nav/NavBar/NavBar'
 
 export class EventListAttendee extends Component {
   render () {

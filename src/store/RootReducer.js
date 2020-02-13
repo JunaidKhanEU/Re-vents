@@ -1,8 +1,7 @@
 import { combineReducers } from 'redux'
-import testReducer from './Test/testReducer'
-
+import eventReducer from './Event/eventReducer'
 const rootReducer = combineReducers({
-  test: testReducer
+  events: eventReducer
 })
 
 export default rootReducer

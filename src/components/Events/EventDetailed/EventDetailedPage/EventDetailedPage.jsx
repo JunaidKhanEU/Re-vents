@@ -7,7 +7,6 @@ import EventDetailedSidebar from '../EventDetailedSidebar/EventDetailedSidebar'
 import { connect } from 'react-redux'
 
 const EventDetailedPage = ({ event }) => {
-  console.log('props in EventDetailed Page', event)
   return (
     <Grid>
       <GridColumn width={10}>

@@ -2,21 +2,21 @@ import React from 'react'
 import NavBar from '../components/Nav/NavBar/NavBar'
 import { Container } from 'semantic-ui-react'
 import EventDashboard from '../components/Events/Dashboard/EventDashboard'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, withRouter } from 'react-router-dom'
 import HomePage from '../components/HomePage/HomePage.jsx'
 import EventDetailedPage from '../components/Events/EventDetailed/EventDetailedPage/EventDetailedPage'
 import PeopleDashboard from '../components/User/PeopleDashboard/PeopleDashboard'
 import SettingsDashboard from '../components/User/Settings/SettingsDashboard/SettingsDashboard'
 import UserDetailedPage from '../components/User/UserDetailedPage/UserDetailedPage'
 import EventForm from '../components/Events/EventForm/EventForm'
-const App = () => {
+const App = (props) => {
   return (
     <>
 
       <Route exact path='/' component={HomePage} />
       <NavBar />
       <Container className='main'>
-        <Switch>
+        <Switch key={props.location.key}>
           <Route exact path='/events' component={EventDashboard} />
           <Route path='/events/:id' component={EventDetailedPage} />
           <Route exact path='/people' component={PeopleDashboard} />
@@ -29,4 +29,4 @@ const App = () => {
   )
 }
 
-export default App
+export default withRouter(App)
